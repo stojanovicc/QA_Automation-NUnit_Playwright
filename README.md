@@ -1,32 +1,81 @@
-# Testiranje I Kvalitet Softvera
+# 🧪 QA Automation – NUnit & Playwright (TuristickiHub mini)
 
-#  Contributors (Student, Br.Indeksa)
-  - Anđela Stojanović, 18406
-  - Anastasija Trajković, 18456
+## 📌 Opis
+Ovaj repozitorijum sadrži automatizovane testove (backend + UI) za **TuristickiHub (manja verzija aplikacije)**, razvijene u okviru predmeta *Testiranje i kvalitet softvera*.
 
-# Stack
- - SQL Server
- - .net WebApi
- - React(JS)
- - NUnit Tests
- - Playwright Tests
+Fokus je na:
+- testiranju REST API logike kroz NUnit
+- testiranju ključnih korisničkih tokova kroz Playwright (E2E)
 
-# Clone repository
- - git clone https://github.com/stojanovicc/TIKS.git
- - cd Projekat
+---
 
-# SQL Server
- - sqllocaldb create Putovanje
- - sqllocaldb start Putovanje
+## 🧰 Tehnologije
+- C# / ASP.NET Web API
+- SQL Server LocalDB
+- React (JS)
+- **NUnit** (unit/integration tests)
+- **Playwright** (E2E UI tests)
 
-# Server start
-  - cd ../Projekat/BackEnd/WebTemplate
-  - dotnet watch run
+---
 
-# Client start
-  - npm install
-  - npm install @mui/icons-material
-  - npm start
+## ✅ NUnit (backend testovi)
+Testovi pokrivaju tipične scenarije:
+- uspešno dodavanje / izmena / brisanje entiteta (Ok)
+- validacija obaveznih polja (BadRequest)
+- rad sa nepostojećim ID-jem (NotFound)
+- provera da su promene perzistirane (npr. brisanje iz baze)
 
-# NUnit Tests
-# Playwright Tests
+Primeri testiranih modula:
+- Agencije
+- Putovanja
+- Aktivnosti
+- Recenzije
+- Rezervacije
+
+---
+
+## 🌐 Playwright (E2E testovi)
+E2E testovi simuliraju ponašanje korisnika kroz browser:
+- navigacija kroz stranice
+- unos u forme
+- CRUD operacije (dodaj / izmeni / obriši)
+- verifikacija da se UI ažurirao nakon akcije
+
+---
+
+## ⚙️ Pokretanje aplikacije (lokalno)
+
+### 1️⃣ SQL Server LocalDB
+```bash
+sqllocaldb create Putovanje
+sqllocaldb start Putovanje
+```
+### 2️⃣ Backend
+```bash
+cd Projekat/BackEnd/WebTemplate
+dotnet run
+```
+
+### 3️⃣ Frontend
+```bash
+npm install
+npm start
+```
+
+## ▶️ Pokretanje testova
+## NUnit
+```bash
+dotnet test
+```
+
+## Playwright
+npx playwright test
+
+
+Napomena: Tokom razvoja testova Playwright može da se pokreće i u režimu Headless = false radi lakšeg debugovanja.
+
+---
+
+## 👩‍💻 Autori
+- Anđela Stojanović
+- Anastasija Trajković
