@@ -62,16 +62,16 @@ npm install
 npm start
 ```
 
-## ▶️ Pokretanje testova
+### ▶️ Pokretanje testova
 ## NUnit
 ```bash
 dotnet test
 ```
 
 ## Playwright
+```bash
 npx playwright test
-
-
+```
 Napomena: Tokom razvoja testova Playwright može da se pokreće i u režimu Headless = false radi lakšeg debugovanja.
 
 ---
