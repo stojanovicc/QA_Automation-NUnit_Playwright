@@ -63,12 +63,12 @@ npm start
 ```
 
 ### ▶️ Pokretanje testova
-## NUnit
+### NUnit
 ```bash
 dotnet test
 ```
 
-## Playwright
+### Playwright
 ```bash
 npx playwright test
 ```
